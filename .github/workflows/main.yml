@@ -1,0 +1,16 @@
+name: Morning Greeting to Dooray
+
+on:
+  schedule:
+    - cron: "0-59/5 0 * * *"   # 매일 한국시간 9시대 5분마다 실행
+  workflow_dispatch:
+
+jobs:
+  send_greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Greeting to Dooray
+        run: |
+          MESSAGE="안녕하세요"
+          curl -X POST -H "Content-Type: application/json" \
+            --data "{\"text\":\"$MESSAGE\"}" ${{ secrets.DOORAY_INCOMING_WEBHOOK_URL }}
