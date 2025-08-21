@@ -2,9 +2,9 @@ import os
 import requests
 
 WEBHOOK_URL = os.getenv("DOORAY_INCOMING_URL")
-BOT_NAME = "자동봇"
+BOT_NAME = "나는봇"
 BOT_ICON = "https://static.dooray.com/static_images/dooray-bot.png"
-TEXT = "안녕"
+TEXT = "안녕하세요. 나는봇입니다."
 
 payload = {
     "botName": BOT_NAME,
