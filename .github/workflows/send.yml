@@ -21,6 +21,6 @@ jobs:
         run: pip install requests
 
       - name: Run send.py
-        run: python send.py
+        run: python .github/workflows/send.py
         env:
           DOORAY_INCOMING_URL: ${{ secrets.DOORAY_INCOMING_URL }}
