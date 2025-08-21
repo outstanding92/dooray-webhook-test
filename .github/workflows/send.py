@@ -1,7 +1,7 @@
 import os
 import requests
 
-WEBHOOK_URL = os.getenv("DOORAY_INCOMING_URL")  # GitHub Secrets에서 불러오기
+WEBHOOK_URL = os.getenv("DOORAY_INCOMING_URL")
 BOT_NAME = "자동봇"
 BOT_ICON = "https://static.dooray.com/static_images/dooray-bot.png"
 TEXT = "안녕"
@@ -14,4 +14,6 @@ payload = {
 headers = {"Content-Type": "application/json"}
 
 resp = requests.post(WEBHOOK_URL, json=payload, headers=headers)
-print(resp.status_code, resp.text)
+
+print("Status:", resp.status_code)
+print("Response text:", resp.text)   # 응답 본문 확인
