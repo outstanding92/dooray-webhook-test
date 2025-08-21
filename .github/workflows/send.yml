@@ -2,7 +2,7 @@ name: Send Hello to Dooray
 
 on:
   schedule:
-    - cron: '0 * * * *'   # 정시마다 실행
+    - cron: '11 * * * *'   # 정시마다 실행
   workflow_dispatch:        # 수동 실행 버튼도 추가
 
 jobs:
